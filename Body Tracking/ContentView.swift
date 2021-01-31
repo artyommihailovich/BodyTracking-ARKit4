@@ -19,7 +19,6 @@ struct ContentView : View {
     }
 }
 
-// Make ARView
 struct ARViewContainer: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ARView {
@@ -37,11 +36,8 @@ struct ARViewContainer: UIViewRepresentable {
     
 }
 
-
-
 extension ARView: ARSessionDelegate {
     
-    // Setup a body tracking configration.
     func setupARConfiguration() {
         let configuration = ARBodyTrackingConfiguration()
         self.session.run(configuration)
@@ -52,22 +48,7 @@ extension ARView: ARSessionDelegate {
     public func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
         for anchor in anchors {
             if let bodyAnchor = anchor as? ARBodyAnchor {
-                /*
-                print("Update bodyAnchor")
 
-                let skeleton = bodyAnchor.skeleton
-
-                let rootJointTransform = skeleton.modelTransform(for: .root)!
-                let rootJointPosition = simd_make_float3(rootJointTransform.columns.3)
-                print("Root: \(rootJointPosition)")
-
-
-                let leftHandTransform = skeleton.modelTransform(for: .leftHand)!
-                let leftHandOffset = simd_make_float3(leftHandTransform.columns.3)
-                let leftHandPosition = rootJointPosition + leftHandOffset
-                print("Left hand position: \(leftHandPosition)")
-                */
-                
                 if let skeleton = bodySkeleton {
                     // BodySkeleton already excists, update pose of all joints.
                     skeleton.updatePositionJoint(with: bodyAnchor)

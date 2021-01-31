@@ -17,8 +17,8 @@ class BodySkeleton: Entity {
         
         for jointName in ARSkeletonDefinition.defaultBody3D.jointNames {
             
-            var jointRadius: Float = 0.03
-            var jointColor: UIColor = .lightGray
+            let jointRadius: Float = 0.03
+            let jointColor: UIColor = .lightGray
             
             let jointEntity = makeJoint(radius: jointRadius, color: jointColor)
             joints[jointName] = jointEntity

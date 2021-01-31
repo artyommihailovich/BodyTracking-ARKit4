@@ -10,11 +10,8 @@
 		A42B1EFD250600C70009C2E3 /* BodySkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B1EFC250600C70009C2E3 /* BodySkeleton.swift */; };
 		A4754CC52505E1CF000FE922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4754CC42505E1CF000FE922 /* AppDelegate.swift */; };
 		A4754CC72505E1CF000FE922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4754CC62505E1CF000FE922 /* ContentView.swift */; };
-		A4754CC92505E1CF000FE922 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4754CC82505E1CF000FE922 /* Experience.rcproject */; };
 		A4754CCB2505E1D0000FE922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4754CCA2505E1D0000FE922 /* Assets.xcassets */; };
 		A4754CCE2505E1D0000FE922 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4754CCD2505E1D0000FE922 /* Preview Assets.xcassets */; };
-		A4754CD92505E1D0000FE922 /* Body_TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4754CD82505E1D0000FE922 /* Body_TrackingTests.swift */; };
-		A4754CE42505E1D0000FE922 /* Body_TrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4754CE32505E1D0000FE922 /* Body_TrackingUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +36,11 @@
 		A4754CC12505E1CF000FE922 /* Body Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Body Tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4754CC42505E1CF000FE922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4754CC62505E1CF000FE922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A4754CC82505E1CF000FE922 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		A4754CCA2505E1D0000FE922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4754CCD2505E1D0000FE922 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4754CCF2505E1D0000FE922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4754CD42505E1D0000FE922 /* Body TrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Body TrackingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4754CD82505E1D0000FE922 /* Body_TrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body_TrackingTests.swift; sourceTree = "<group>"; };
-		A4754CDA2505E1D0000FE922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4754CDF2505E1D0000FE922 /* Body TrackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Body TrackingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4754CE32505E1D0000FE922 /* Body_TrackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body_TrackingUITests.swift; sourceTree = "<group>"; };
-		A4754CE52505E1D0000FE922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				A4754CC32505E1CF000FE922 /* Body Tracking */,
-				A4754CD72505E1D0000FE922 /* Body TrackingTests */,
-				A4754CE22505E1D0000FE922 /* Body TrackingUITests */,
 				A4754CC22505E1CF000FE922 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,7 +92,6 @@
 				A4754CC42505E1CF000FE922 /* AppDelegate.swift */,
 				A4754CC62505E1CF000FE922 /* ContentView.swift */,
 				A42B1EFC250600C70009C2E3 /* BodySkeleton.swift */,
-				A4754CC82505E1CF000FE922 /* Experience.rcproject */,
 				A4754CCA2505E1D0000FE922 /* Assets.xcassets */,
 				A4754CCF2505E1D0000FE922 /* Info.plist */,
 				A4754CCC2505E1D0000FE922 /* Preview Content */,
@@ -116,24 +105,6 @@
 				A4754CCD2505E1D0000FE922 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A4754CD72505E1D0000FE922 /* Body TrackingTests */ = {
-			isa = PBXGroup;
-			children = (
-				A4754CD82505E1D0000FE922 /* Body_TrackingTests.swift */,
-				A4754CDA2505E1D0000FE922 /* Info.plist */,
-			);
-			path = "Body TrackingTests";
-			sourceTree = "<group>";
-		};
-		A4754CE22505E1D0000FE922 /* Body TrackingUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A4754CE32505E1D0000FE922 /* Body_TrackingUITests.swift */,
-				A4754CE52505E1D0000FE922 /* Info.plist */,
-			);
-			path = "Body TrackingUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +239,6 @@
 				A42B1EFD250600C70009C2E3 /* BodySkeleton.swift in Sources */,
 				A4754CC72505E1CF000FE922 /* ContentView.swift in Sources */,
 				A4754CC52505E1CF000FE922 /* AppDelegate.swift in Sources */,
-				A4754CC92505E1CF000FE922 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4754CD92505E1D0000FE922 /* Body_TrackingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4754CE42505E1D0000FE922 /* Body_TrackingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +398,7 @@
 				DEVELOPMENT_TEAM = SWPDQ88TSM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Body Tracking/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +420,7 @@
 				DEVELOPMENT_TEAM = SWPDQ88TSM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Body Tracking/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,15 +12,16 @@ import ARKit
 var bodySkeleton: BodySkeleton?
 var bodySkeletonAnchor = AnchorEntity()
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    lazy private var arView = ARView().do {
+    private lazy var arView = ARView().do {
         $0.frame = view.bounds
         $0.setupARConfiguration()
         $0.scene.addAnchor(bodySkeletonAnchor)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         view.addSubview(arView)
     }
 }

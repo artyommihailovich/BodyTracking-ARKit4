@@ -9,15 +9,16 @@ import UIKit
 import RealityKit
 import ARKit
 
-var bodySkeleton: BodySkeleton?
-var bodySkeletonAnchor = AnchorEntity()
-
 final class ViewController: UIViewController {
+    
+    private let skeletonAnchor = AnchorEntity()
+    private var bodySkeleton: BodySkeleton?
 
     private lazy var arView = ARView().do {
         $0.frame = view.bounds
+        $0.session.delegate = self
         $0.setupARConfiguration()
-        $0.scene.addAnchor(bodySkeletonAnchor)
+        $0.scene.addAnchor(skeletonAnchor)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,15 +27,8 @@ final class ViewController: UIViewController {
     }
 }
 
-extension ARView: ARSessionDelegate {
-    
-    func setupARConfiguration() {
-        let configuration = ARBodyTrackingConfiguration()
-        self.session.run(configuration)
-        self.session.delegate = self
-    }
-    
-    public func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+extension ViewController: ARSessionDelegate {
+    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
         for anchor in anchors {
             if let bodyAnchor = anchor as? ARBodyAnchor {
                 if let skeleton = bodySkeleton {
@@ -42,11 +36,9 @@ extension ARView: ARSessionDelegate {
                 } else {
                     let skeleton = BodySkeleton(for: bodyAnchor)
                     bodySkeleton = skeleton
-                    bodySkeletonAnchor.addChild(skeleton)
+                    skeletonAnchor.addChild(skeleton)
                 }
             }
         }
     }
 }
-
-
